@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
+
 import "./App.css";
+
 import "@aws-amplify/ui-react/styles.css";
+
 import { API } from "aws-amplify";
+
 import {
   Button,
   Flex,
@@ -11,11 +15,17 @@ import {
   View,
   withAuthenticator,
 } from "@aws-amplify/ui-react";
+
 import { listNotes } from "./graphql/queries";
+
 import {
   createNote as createNoteMutation,
   deleteNote as deleteNoteMutation,
 } from "./graphql/mutations";
+
+import { Amplify } from 'aws-amplify';
+import config from './aws-exports';
+Amplify.configure(config);
 
 const App = ({ signOut }) => {
   const [notes, setNotes] = useState([]);
