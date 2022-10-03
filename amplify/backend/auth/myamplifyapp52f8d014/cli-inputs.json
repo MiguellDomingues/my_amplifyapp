@@ -1,6 +1,8 @@
 {
   "version": "1",
   "cognitoConfig": {
+    "identityPoolName": "myamplifyapp52f8d014_identitypool_542738af",
+    "allowUnauthenticatedIdentities": false,
     "resourceNameTruncated": "myampl52f8d014",
     "userPoolName": "myamplifyapp52f8d014_userpool_52f8d014",
     "autoVerifiedAttributes": [
@@ -33,7 +35,7 @@
     "userpoolClientSetAttributes": false,
     "sharedId": "52f8d014",
     "resourceName": "myamplifyapp52f8d014",
-    "authSelections": "userPoolOnly",
+    "authSelections": "identityPoolAndUserPool",
     "useDefault": "manual",
     "userPoolGroupList": [],
     "serviceName": "Cognito",
